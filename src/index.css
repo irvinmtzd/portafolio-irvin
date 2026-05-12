@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color de fondo base para evitar parpadeos blancos al cargar */
+body {
+  background-color: #06090e;
+}
