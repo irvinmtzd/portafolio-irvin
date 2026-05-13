@@ -62,19 +62,19 @@ const AnimatedBackground = () => (
 const MIS_PROYECTOS = [
   {
     id: 1,
-    titulo: "Nombre del Proyecto 1",
-    descripcion: "Desarrollo completo de sitio web comercial. Se implementaron estrategias de SEO técnico logrando mejorar los tiempos de carga en un X%.",
+    titulo: "TALI",
+    descripcion: "Desarrollo completo de sitio web comercial. Se implementaron estrategias de SEO técnico logrando mejorar los tiempos de carga en un 90%.",
     tecnologias: ["WordPress", "PHP", "CSS", "SEO"],
-    link: "https://link-al-proyecto-1.com",
+    link: "https://fabricaciondemadrinas.com/",
     // Puedes elegir qué ícono mostrar cambiando la etiqueta
     icono: <Globe className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
   },
   {
     id: 2,
-    titulo: "Nombre del Proyecto 2",
-    descripcion: "Plataforma enfocada en la experiencia de usuario (UX) y conversión. Diseño responsivo para todos los dispositivos.",
-    tecnologias: ["React", "Tailwind", "JavaScript"],
-    link: "https://link-al-proyecto-2.com",
+    titulo: "Shopdesig",
+    descripcion: "Desarrollo completo de sitio web. Implementando SEO técnico, enfocado en la experiencia de usuario, enfocado en compartir proyectos y marcas de la empresa",
+    tecnologias: ["WordPress", "PHP", "CSS", "SEO"],
+    link: "https://shopdesignpro.mx/",
     icono: <Monitor className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
   },
   {
