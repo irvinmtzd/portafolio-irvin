@@ -76,14 +76,6 @@ const MIS_PROYECTOS = [
     tecnologias: ["WordPress", "PHP", "CSS", "SEO"],
     link: "https://shopdesignpro.mx/",
     icono: <Monitor className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
-  },
-  {
-    id: 3,
-    titulo: "Nombre del Proyecto 3",
-    descripcion: "Landing page de alta conversión para campaña de marketing. Integración con herramientas de analítica.",
-    tecnologias: ["HTML5", "CSS3", "Google Analytics"],
-    link: "https://link-al-proyecto-3.com",
-    icono: <Code className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
   }
 ];
 
