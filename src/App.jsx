@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // IMPORTANTE: Quitamos Github y Linkedin de aquí
-import { Mail, ExternalLink, ChevronRight, Menu, X, Code, Terminal, Database, Award, Users, Trophy } from 'lucide-react';
+import { Mail, ExternalLink, ChevronRight, Menu, X, Code, Terminal, Database, Award, Users, Trophy, Globe, Monitor, Smartphone } from "lucide-react";
 
 // --- Iconos de Marcas (SVGs Nativos) ---
 const GithubIcon = ({ className }) => (
@@ -57,6 +57,36 @@ const AnimatedBackground = () => (
     <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
   </div>
 );
+
+
+const MIS_PROYECTOS = [
+  {
+    id: 1,
+    titulo: "Nombre del Proyecto 1",
+    descripcion: "Desarrollo completo de sitio web comercial. Se implementaron estrategias de SEO técnico logrando mejorar los tiempos de carga en un X%.",
+    tecnologias: ["WordPress", "PHP", "CSS", "SEO"],
+    link: "https://link-al-proyecto-1.com",
+    // Puedes elegir qué ícono mostrar cambiando la etiqueta
+    icono: <Globe className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
+  },
+  {
+    id: 2,
+    titulo: "Nombre del Proyecto 2",
+    descripcion: "Plataforma enfocada en la experiencia de usuario (UX) y conversión. Diseño responsivo para todos los dispositivos.",
+    tecnologias: ["React", "Tailwind", "JavaScript"],
+    link: "https://link-al-proyecto-2.com",
+    icono: <Monitor className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
+  },
+  {
+    id: 3,
+    titulo: "Nombre del Proyecto 3",
+    descripcion: "Landing page de alta conversión para campaña de marketing. Integración con herramientas de analítica.",
+    tecnologias: ["HTML5", "CSS3", "Google Analytics"],
+    link: "https://link-al-proyecto-3.com",
+    icono: <Code className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
+  }
+];
+
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -309,38 +339,41 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Proyecto 1 */}
-            <div className="group block relative rounded-3xl overflow-hidden glass-card border border-white/5 hover:border-emerald-500/30 transition-all duration-500">
-              <div className="h-64 bg-[#0a0f16] relative overflow-hidden flex items-center justify-center border-b border-white/5">
-                <Code className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-emerald-500/50 transition-all duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f16] to-transparent opacity-80"></div>
-              </div>
-              <div className="p-8 relative">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Portal LK Asociados</h3>
-                <p className="text-gray-400 mb-6 text-sm">Optimización de usabilidad y navegación estructural para portal corporativo, mejorando retención de usuarios.</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-white/5 rounded-full text-xs font-medium">HTML/CSS</span>
-                  <span className="px-3 py-1 bg-white/5 rounded-full text-xs font-medium">JavaScript</span>
-                </div>
-              </div>
+              {MIS_PROYECTOS.map((proyecto) => (
+                <a 
+                  key={proyecto.id} 
+                  href={proyecto.link} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="group block relative rounded-3xl overflow-hidden glass-card border border-white/5 hover:border-emerald-500/30 transition-all duration-500 cursor-pointer"
+                >
+                  {/* Imagen / Icono de fondo */}
+                  <div className="h-64 bg-[#0a0f16] relative overflow-hidden flex items-center justify-center border-b border-white/5">
+                    {proyecto.icono}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f16] to-transparent opacity-80"></div>
+                  </div>
+                  
+                  {/* Textos */}
+                  <div className="p-8 relative">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                      {proyecto.titulo}
+                    </h3>
+                    <p className="text-gray-400 mb-6 text-sm">
+                      {proyecto.descripcion}
+                    </p>
+                    
+                    {/* Etiquetas (Tags) iteradas automáticamente */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {proyecto.tecnologias.map((tech, index) => (
+                        <span key={index} className="px-3 py-1 bg-white/5 rounded-full text-xs font-medium">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
-
-            {/* Proyecto 2 */}
-            <div className="group block relative rounded-3xl overflow-hidden glass-card border border-white/5 hover:border-cyan-500/30 transition-all duration-500">
-              <div className="h-64 bg-[#0a0f16] relative overflow-hidden flex items-center justify-center border-b border-white/5">
-                <Database className="w-20 h-20 text-gray-700 group-hover:scale-110 group-hover:text-cyan-500/50 transition-all duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f16] to-transparent opacity-80"></div>
-              </div>
-              <div className="p-8 relative">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Ecosistema Ingenia</h3>
-                <p className="text-gray-400 mb-6 text-sm">Gestión integral de infraestructura web, migraciones de bases de datos y personalización de sitios en WordPress.</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-white/5 rounded-full text-xs font-medium">WordPress</span>
-                  <span className="px-3 py-1 bg-white/5 rounded-full text-xs font-medium">Hosting Mgmt</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
