@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // IMPORTANTE: Quitamos Github y Linkedin de aquí
-import { Mail, ExternalLink, ChevronRight, Menu, X, Code, Terminal, Database, Award, Users, Trophy } from 'lucide-react';
+import { Mail, ExternalLink, ChevronRight, Menu, X, Code, Terminal, Database, Award, Users, Trophy, Globe, Monitor, Smartphone } from "lucide-react";
 
 // --- Iconos de Marcas (SVGs Nativos) ---
 const GithubIcon = ({ className }) => (
@@ -58,8 +58,6 @@ const AnimatedBackground = () => (
   </div>
 );
 
-// Agrega los íconos que vayas a usar en tus importaciones arriba
-import { Code, Globe, Monitor, Smartphone } from 'lucide-react';
 
 const MIS_PROYECTOS = [
   {
